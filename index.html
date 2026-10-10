@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entdecke handgemachte Duftkerzen für dein Zuhause.">
+  <title>Kerzenzauber – Handgemachte Kerzen</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo">Kerzenzauber<span> ✦</span></a>
+  <nav>
+    <a href="#produkte">Produkte</a>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <button id="openCart" class="cart-button">
+    🛒 Warenkorb (<span id="cartCount">0</span>)
+  </button>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">HANDGEMACHT MIT LIEBE</p>
+    <h1>Licht an.<br>Alltag aus.</h1>
+    <p>Entdecke besondere Duftkerzen für gemütliche
+       Abende und unvergessliche Geschenke.</p>
+    <a href="#produkte" class="button">Kollektion entdecken</a>
+  </div>
+</section>
+
+<main>
+  <section class="section" id="produkte">
+    <p class="eyebrow">UNSERE KOLLEKTION</p>
+    <h2>Finde deine Lieblingskerze</h2>
+    <p class="muted">Dein Zuhause verdient ein bisschen Magie.</p>
+    <div class="products" id="products"></div>
+  </section>
+
+  <section class="about section" id="ueber-uns">
+    <p class="eyebrow">UNSERE PHILOSOPHIE</p>
+    <h2>Kleine Kerzen, große Gemütlichkeit</h2>
+    <p>
+      Unsere Kerzen bringen Wärme und eine besondere
+      Atmosphäre in dein Zuhause. Ob als Geschenk oder
+      für deinen eigenen Wohlfühlmoment – finde deine
+      Lieblingskerze bei Kerzenzauber.
+    </p>
+  </section>
+
+  <section class="section contact" id="kontakt">
+    <h2>Fragen zu unseren Kerzen?</h2>
+    <p>Wir freuen uns auf deine Nachricht.</p>
+    <a href="mailto:deine-email@example.com">
+      deine-email@example.com
+    </a>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Kerzenzauber</p>
+  <div class="footer-links">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="widerruf.html">Widerruf</a>
+    <a href="versand.html">Versand & Rückgabe</a>
+  </div>
+  <p class="footer-note">
+    Alle Preise in Euro. Versandkosten werden vor dem
+    Kauf angezeigt.
+  </p>
+</footer>
+
+<div class="modal" id="cartModal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="closeCart" class="close-button"
+            aria-label="Warenkorb schließen">×</button>
+
+    <h2>Dein Warenkorb</h2>
+    <div id="cartItems"></div>
+
+    <div class="total">
+      Gesamt: <strong id="cartTotal">0,00 €</strong>
+    </div>
+
+    <form id="checkoutForm">
+      <h3>Lieferadresse</h3>
+
+      <label for="name">Vor- und Nachname</label>
+      <input id="name" name="name" autocomplete="name" required>
+
+      <label for="email">E-Mail-Adresse</label>
+      <input id="email" name="email" type="email"
+             autocomplete="email" required>
+
+      <label for="address">Straße und Hausnummer</label>
+      <input id="address" name="address"
+             autocomplete="street-address" required>
+
+      <label for="postcode">Postleitzahl</label>
+      <input id="postcode" name="postcode"
+             autocomplete="postal-code" required>
+
+      <label for="city">Ort</label>
+      <input id="city" name="city"
+             autocomplete="address-level2" required>
+
+      <button class="button full-width" type="submit">
+        Zur Bestellung und Zahlung
+      </button>
+    </form>
+
+    <p id="checkoutMessage" class="notice">
+      Die Zahlung wird erst nach Einrichtung des
+      Zahlungssystems aktiviert.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
